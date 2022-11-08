@@ -1,1 +1,109 @@
-<p>header-bar works!</p>
+<div class="header-container">
+  <div [ngClass]="isBooking ? 'header-contact is-booking':'header-contact'">
+    <a href="mailto:info@spinningreel.co.za?subject=Info"
+       class="contact-link w-inline-block">
+      <img src="../../assets/img/svg/email.svg"
+           loading="lazy"
+           alt=""
+           class="icon-x-small">
+      <div>info@spinningreel.co.za</div>
+    </a>
+    <a href="tel:+270466244281"
+       class="contact-link w-inline-block">
+      <img src="../../assets/img/svg/phone.svg"
+           loading="lazy"
+           alt=""
+           class="icon-x-small">
+      <div>+27 (046) 624 4281</div>
+    </a>
+  </div>
+  <div class="navbar-container">
+    <div class="navbar-content">
+      <input title="toggle"
+             type="checkbox"
+             [checked]="isChecked"
+             (change)="navToggle()"
+             id="nav-toggle"
+             class="nav-toggle" />
+      <nav>
+        <ul>
+          <li>
+            <a [ngClass]="isSummary ? 'text-color-black' : ''"
+               routerLink="/accommodation"
+               (click)="navToggle()"
+               class="navbar-link w-nav-link">Accommodation</a>
+          </li>
+          <li>
+            <a [ngClass]="isSummary ? 'text-color-black' : ''"
+               routerLink="/contact"
+               (click)="navToggle()"
+               class="navbar-link w-nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <label for="nav-toggle"
+             class="nav-toggle-label">
+        <span></span>
+      </label>
+
+      <a *ngIf="isSummary"
+         routerLink="/home"
+         aria-current="page"
+         class="navbar_logo-link w-nav-brand w--current">
+        <img src="../../assets/img/svg/Logo-markblack.svg"
+             loading="lazy"
+             alt=""
+             class="navbar_logo">
+        <img src="../../assets/img/svg/Logo.svg"
+             loading="lazy"
+             alt=""
+             class="navbar_logo">
+      </a>
+
+      <a *ngIf="!isSummary"
+         routerLink="/home"
+         aria-current="page"
+         class="navbar_logo-link w-nav-brand w--current">
+        <img src="../../assets/img/svg/Logo-markwhite.svg"
+             loading="lazy"
+             alt=""
+             class="navbar_logo">
+        <img src="../../assets/img/svg/Logowhite.svg"
+             loading="lazy"
+             alt=""
+             class="navbar_logo">
+      </a>
+      <div *ngIf="!isSummary"
+           class="booking-button">
+        <a routerLink="/booking"
+           class="w-button button is-navbar-button">Book Now</a>
+      </div>
+    </div>
+  </div>
+  <div [ngClass]="isSummary ? 'hide' : 'home-header_content-wrapper'">
+    <div class="padding-vertical padding-xhuge">
+      <div class="margin-bottom margin-xxsmall">
+        <h4 class="text-color-white">Port Alfred</h4>
+      </div>
+      <div class="margin-bottom margin-small">
+        <h1 class="text-color-white">Secluded beach cottages</h1>
+      </div>
+      <div class="margin-top margin-medium">
+        <div class="button-row">
+          <a routerLink="/booking"
+             class="button is-alternate">Book now</a>
+        </div>
+      </div>
+    </div>
+    <div class="home-header_background-wrapper">
+      <div class="home-header_overlay-wrapper">
+        <div class="home-header_overlay"></div>
+      </div>
+      <img src="../../assets/img/Spinning-Reel-Beach.jpg"
+           loading="lazy"
+           alt="A bird&#x27;s eye view of the beach and coast with Spinning Reel cottages just behind the sand dunes"
+           class="home-header_background-image">
+    </div>
+  </div>
+</div>

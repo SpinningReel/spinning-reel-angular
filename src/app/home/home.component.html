@@ -1,24 +1,19 @@
-<div class="page-wrapper">
-  <main class="main-wrapper">
-    <app-header-bar></app-header-bar>
-    <section class="home-section-description-wrapper">
-      <p>Situated in the heart of the Sunshine Coast, Spinning Reel offers a restful,
-        comfortable and secluded holiday break for families, romantic getaways, or a re-charging stopover
-        for the weary traveler.</p>
-    </section>
-    <section class="home-section-accommodation">
-      <app-accommodation [isSummary]="false"></app-accommodation>
-    </section>
-    <section class="home-section-about">
-      <app-about></app-about>
-    </section>
-    <section class="home-section-attractions">
-      <app-attractions></app-attractions>
-    </section>
-    <section class="home-section-testimonials">
-      <app-testimonials></app-testimonials>
-    </section>
-    <app-feature></app-feature>
-    <app-footer></app-footer>
-  </main>
+<app-header-bar></app-header-bar>
+
+<div class="home-description">
+  <p>Situated in the heart of the Sunshine Coast, Spinning Reel offers a restful,
+    comfortable and secluded holiday break for families, romantic getaways, or a re-charging stopover
+    for the weary traveler.</p>
 </div>
+
+<app-accommodation [isSummary]="false"></app-accommodation>
+
+<app-about></app-about>
+
+<app-attractions></app-attractions>
+
+<app-testimonials></app-testimonials>
+
+<app-feature></app-feature>
+
+<app-footer></app-footer>
