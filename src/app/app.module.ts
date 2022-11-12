@@ -13,6 +13,11 @@ import { FeatureComponent } from './feature/feature.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { BookingComponent } from './booking/booking.component';
+import { AccommodationGridComponent } from './accommodation/accommodation-grid/accommodation-grid.component';
+import { AccommodationDetailComponent } from './accommodation/accommodation-detail/accommodation-detail.component';
+import { BedAndBreakfastComponent } from './accommodation/bed-and-breakfast/bed-and-breakfast.component';
+import { ChaletsComponent } from './accommodation/chalets/chalets.component';
+import { BeachCottagesComponent } from './accommodation/beach-cottages/beach-cottages.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { BookingComponent } from './booking/booking.component';
     FeatureComponent,
     FooterComponent,
     ContactComponent,
-    BookingComponent
+    BookingComponent,
+    AccommodationGridComponent,
+    AccommodationDetailComponent,
+    BedAndBreakfastComponent,
+    ChaletsComponent,
+    BeachCottagesComponent
   ],
   imports: [
     BrowserModule,

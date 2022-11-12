@@ -1,1 +1,8 @@
-<app-header-bar [isSummary]="true"></app-header-bar>
+<app-header-bar *ngIf="isSummary"
+                [isSummary]="true"></app-header-bar>
+<div class="container-large">
+  <div class="padding-vertical padding-xhuge">
+    <app-accommodation-grid *ngIf="!isSummary"></app-accommodation-grid>
+  </div>
+</div>
+<app-footer *ngIf="isSummary"></app-footer>

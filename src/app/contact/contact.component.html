@@ -1,1 +1,99 @@
-<p>contact works!</p>
+<app-header-bar [isSummary]="true"></app-header-bar>
+<section class="contact-section-contact">
+  <div class="page-padding">
+    <div class="container-large">
+      <div class="padding-vertical padding-xhuge">
+        <div class="w-layout-grid contact-contact_component">
+          <div class="contact-contact_content">
+            <div class="margin-bottom margin-medium">
+              <div class="margin-bottom margin-small">
+                <h1>Contact us</h1>
+              </div>
+            </div>
+            <div class="contact-contact_contact-list">
+              <a href="mailto:info@spinningreel.co.za?subject=Info"
+                 class="contact-link w-inline-block">
+                 <img src="../../assets/img/svg/email.svg"
+                     loading="lazy"
+                     alt=""
+                     class="icon-1x1-xsmall">
+                <div>info@spinningreel.co.za</div>
+              </a>
+              <a href="tel:+270466244281"
+                 class="contact-link w-inline-block">
+                 <img src="../../assets/img/svg/phone.svg"
+                     loading="lazy"
+                     alt=""
+                     class="icon-1x1-xsmall">
+                <div>+27 (046) 624 4281</div>
+              </a>
+              <a href="https://g.page/TheSpinningReel?share"
+                 target="_blank"
+                 class="contact-link align-top w-inline-block">
+                <div class="contact-link_contents">
+                  <img src="../../assets/img/svg/icon-location.svg"
+                       loading="lazy"
+                       alt=""
+                       class="icon-1x1-xsmall">
+                  <div>Freshwater Road, Port Alfred<br>Eastern Cape<br>6170<br>South Africa</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="contact-contact_form-block w-form">
+            <form id="wf-form-Contact-5-Form"
+                  name="wf-form-Contact-5-Form"
+                  data-name="Contact 5 Form"
+                  method="get"
+                  class="contact-contact_form">
+              <div class="form-field-wrapper"><label for="Contact-5-Name"
+                       class="field-label">Name</label><input type="text"
+                       class="form-input w-input"
+                       maxlength="256"
+                       name="Contact-5-Name"
+                       data-name="Contact 5 Name"
+                       placeholder=""
+                       id="Contact-5-Name"
+                       required=""></div>
+              <div class="form-field-wrapper"><label for="Contact-5-Email"
+                       class="field-label">Email</label><input type="email"
+                       class="form-input w-input"
+                       maxlength="256"
+                       name="Contact-5-Email"
+                       data-name="Contact 5 Email"
+                       placeholder=""
+                       id="Contact-5-Email"
+                       required=""></div>
+              <div class="form-field-wrapper"><label for="Contact-5-Message"
+                       class="field-label">Message</label><textarea placeholder="Type your message..."
+                          maxlength="5000"
+                          id="Contact-5-Message"
+                          name="Contact-5-Message"
+                          data-name="Contact 5 Message"
+                          required=""
+                          class="form-input is-text-area w-input"></textarea></div>
+              <div class="margin-bottom margin-xsmall">
+                <div class="recaptcha-wrapper">
+                  <div
+                       class="w-form-formrecaptcha g-recaptcha g-recaptcha-error g-recaptcha-disabled g-recaptcha-invalid-key">
+                  </div>
+                </div>
+              </div><input type="submit"
+                     value="Submit"
+                     data-wait="Please wait..."
+                     id="w-node-_9e0979ad-a750-88c0-0ac5-cc17f22e4994-01a3cb55"
+                     class="button">
+            </form>
+            <div class="success-message w-form-done">
+              <div class="success-text">Thank you! Your submission has been received!</div>
+            </div>
+            <div class="error-message w-form-fail">
+              <div class="error-text">Oops! Something went wrong while submitting the form.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

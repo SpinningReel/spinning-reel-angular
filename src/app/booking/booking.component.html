@@ -1,2 +1,174 @@
 <app-header-bar [isBooking]="true"
                 [isSummary]="true"></app-header-bar>
+<section class="booking-section-contact">
+  <div class="page-padding">
+    <div class="container-small">
+      <div class="padding-vertical padding-xhuge">
+        <div class="margin-bottom margin-large">
+          <div class="text-align-center">
+            <div class="max-width-large align-center">
+              <div class="margin-bottom margin-small">
+                <h1>Booking</h1>
+              </div>
+              <p class="text-size-medium">Please complete the form below. Once we receive your enquiry we will contact
+                you. Thank you for your interest.</p>
+            </div>
+          </div>
+        </div>
+        <div class="booking-contact_component w-form">
+          <form id="wf-form-Booking"
+                name="wf-form-Booking"
+                data-name="Booking"
+                method="get"
+                class="booking-contact_form">
+            <div class="form-field-wrapper">
+              <label for="Booking-Name"
+                     class="field-label">Name</label>
+              <input type="text"
+                     class="form-input w-input"
+                     autofocus="true"
+                     maxlength="256"
+                     name="Booking-Name"
+                     data-name="Booking Name"
+                     placeholder=""
+                     id="Booking-Name"
+                     required="">
+            </div>
+            <div class="form-field-2col is-mobile-1col">
+              <div class="form-field-wrapper">
+                <label for="Booking-Email"
+                       class="field-label">Email</label>
+                <input type="email"
+                       class="form-input w-input"
+                       maxlength="256"
+                       name="Booking-Email"
+                       data-name="Booking Email"
+                       placeholder=""
+                       id="Booking-Email"
+                       required=""></div>
+              <div class="form-field-wrapper">
+                <label for="Booking-Phone"
+                       class="field-label">Phone number</label>
+                <input type="tel"
+                       class="form-input w-input"
+                       maxlength="256"
+                       name="Booking-Phone"
+                       data-name="Booking Phone"
+                       placeholder=""
+                       id="Booking-Phone"
+                       required="">
+              </div>
+            </div>
+            <div class="form-field-2col is-mobile-1col">
+              <div class="form-field-wrapper">
+                <label for="Booking-Adults"
+                       class="field-label">Adults</label>
+                <select id="Booking-Adults"
+                        name="Booking-Adults"
+                        data-name="Booking Adults"
+                        required=""
+                        class="form-input is-select-input w-select">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7 or more">7 or more</option>
+                </select>
+              </div>
+              <div class="form-field-wrapper">
+                <label for="Booking-Children"
+                       class="field-label">Children</label>
+                <select id="Booking-Children"
+                        name="Booking-Children"
+                        data-name="Booking Children"
+                        required=""
+                        class="form-input is-select-input w-select">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6 or more">6 or more</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field-2col is-mobile-1col">
+              <div class="form-field-wrapper">
+                <label for="Booking-Adults-2"
+                       class="field-label">Arrival Date</label>
+                <div class="form-input-date-wrapper">
+                  <input type="text"
+                         class="form-input-date w-input"
+                         autocomplete="off"
+                         maxlength="256"
+                         name="Booking-Arrival-Date"
+                         data-name="Booking Arrival Date"
+                         placeholder="Select Date"
+                         data-toggle="datepicker"
+                         id="Booking-Arrival-Date"
+                         required="">
+                  <img loading="lazy"
+                       src="../../assets/img/svg/calendar.svg"
+                       alt=""
+                       class="date-field-icon">
+                </div>
+              </div>
+              <div class="form-field-wrapper">
+                <label for="Booking-Children-2"
+                       class="field-label">Departure Date</label>
+                <div class="form-input-date-wrapper">
+                  <input type="text"
+                         class="form-input-date w-input"
+                         autocomplete="off"
+                         maxlength="256"
+                         name="Booking-Departure-Date"
+                         data-name="Booking Departure Date"
+                         placeholder="Select Date"
+                         data-toggle="datepicker"
+                         id="Booking-Departure-Date"
+                         required="">
+                  <img loading="lazy"
+                       src="../../assets/img/svg/calendar.svg"
+                       alt=""
+                       class="date-field-icon">
+                </div>
+              </div>
+            </div>
+            <div class="form-field-wrapper">
+              <label for="Booking-Special-Requests"
+                     class="field-label">Special Requests</label>
+              <textarea id="Booking-Special-Requests"
+                        name="Booking-Special-Requests"
+                        maxlength="5000"
+                        data-name="Booking Special Requests"
+                        placeholder="Type your message..."
+                        class="form-input is-text-area w-input"></textarea>
+            </div>
+            <div class="margin-bottom margin-xsmall">
+              <div class="recaptcha-wrapper">
+                <div
+                     class="w-form-formrecaptcha g-recaptcha g-recaptcha-error g-recaptcha-disabled g-recaptcha-invalid-key">
+                </div>
+              </div>
+            </div>
+            <input type="submit"
+                   data-wait="Please wait..."
+                   value="Submit"
+                   id="w-node-_6ac914a1-f8eb-52af-3d73-69de529a486c-80bc6bf9"
+                   class="button">
+          </form>
+          <div class="success-message w-form-done">
+            <div class="success-text">Thank you! Your submission has been received!</div>
+          </div>
+          <div class="error-message w-form-fail">
+            <div class="error-text">Oops! Something went wrong while submitting the form.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
