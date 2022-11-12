@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AccommodationComponent implements OnInit {
   @Input()
-  isSummary: boolean = true;
+  isHomeView: boolean = false;
 
   constructor() { }
 

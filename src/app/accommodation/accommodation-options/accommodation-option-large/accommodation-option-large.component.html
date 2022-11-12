@@ -1,0 +1,26 @@
+<div class="accommodation_item">
+  <div class="accommodation_item-wrapper">
+    <div class="accommodation_image-wrapper">
+      <img [src]="backgroundImgSource"
+           loading="lazy"
+           alt=""
+           class="accommodation_image" />
+    </div>
+    <div class="accommodation_hover-wrapper">
+      <div>
+        <div class="margin-bottom margin-xxsmall">
+          <h3 class="text-color-white">{{accommodationTitle}}</h3>
+        </div>
+        <div class="text-color-white">{{accommodationDescription}}</div>
+      </div>
+      <a [routerLink]="routerLink"
+         class="button-link with-icon is-alternate w-inline-block">
+        <div>view</div>
+        <img src="../../../../assets/img/svg/Chevron-Right-White.svg"
+             loading="lazy"
+             alt=""
+             class="icon-xxsmall">
+      </a>
+    </div>
+  </div>
+</div>

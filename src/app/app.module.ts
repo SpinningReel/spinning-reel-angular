@@ -14,10 +14,12 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { BookingComponent } from './booking/booking.component';
 import { AccommodationGridComponent } from './accommodation/accommodation-grid/accommodation-grid.component';
-import { AccommodationDetailComponent } from './accommodation/accommodation-detail/accommodation-detail.component';
-import { BedAndBreakfastComponent } from './accommodation/bed-and-breakfast/bed-and-breakfast.component';
-import { ChaletsComponent } from './accommodation/chalets/chalets.component';
-import { BeachCottagesComponent } from './accommodation/beach-cottages/beach-cottages.component';
+import { BedAndBreakfastComponent } from './accommodation/pages/bed-and-breakfast/bed-and-breakfast.component';
+import { ChaletsComponent } from './accommodation/pages/chalets/chalets.component';
+import { BeachCottagesComponent } from './accommodation/pages/beach-cottages/beach-cottages.component';
+import { AccommodationOptionMediumComponent } from './accommodation/accommodation-options/accommodation-option-medium/accommodation-option-medium.component';
+import { AccommodationOptionLargeComponent } from './accommodation/accommodation-options/accommodation-option-large/accommodation-option-large.component';
+import { AccommodationOptionSmallComponent } from './accommodation/accommodation-options/accommodation-option-small/accommodation-option-small.component';
 
 @NgModule({
   declarations: [
@@ -33,10 +35,12 @@ import { BeachCottagesComponent } from './accommodation/beach-cottages/beach-cot
     ContactComponent,
     BookingComponent,
     AccommodationGridComponent,
-    AccommodationDetailComponent,
     BedAndBreakfastComponent,
     ChaletsComponent,
-    BeachCottagesComponent
+    BeachCottagesComponent,
+    AccommodationOptionLargeComponent,
+    AccommodationOptionMediumComponent,
+    AccommodationOptionSmallComponent
   ],
   imports: [
     BrowserModule,

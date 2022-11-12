@@ -1,0 +1,23 @@
+<div class="home-accommodation_options-item">
+  <div class="home-accommodation_options-item-wrapper">
+    <div class="home-accommodation_options-item-image-wrapper">
+      <img [src]="backgroundImgSource"
+           loading="lazy"
+           alt=""
+           class="home-accommodation_options-item-image">
+    </div>
+    <div class="home-accommodation_options-item-description-wrapper">
+      <div class="margin-bottom margin-xxsmall">
+        <h4>{{accommodationTitle}}</h4>
+      </div>
+      <a [routerLink]="routerLink"
+         class="button-link with-icon w-inline-block">
+        <div>view</div>
+        <img src="../../../assets/img/svg/Chevron-Right.svg"
+             loading="lazy"
+             alt=""
+             class="icon-xxsmall">
+      </a>
+    </div>
+  </div>
+</div>

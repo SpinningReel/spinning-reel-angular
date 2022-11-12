@@ -1,0 +1,30 @@
+<div class="page-padding">
+  <div class="container-large">
+    <div class="padding-vertical padding-xhuge">
+      <div class="accommodation-type_list-wrapper">
+        <div class="accommodation-type_list">
+          <div class="accommodation-type_item"
+               [ngClass]="isEven ? 'accommodation-type_item-even' :'accommodation-type_item-odd'">
+            <div class="accomodation-type_content">
+              <div class="margin-bottom margin-small">
+                <h2>{{accommodationTitle}}</h2>
+              </div>
+              <p class="text-size-medium">{{accommodationDescription}}</p>
+              <div class="margin-top margin-medium">
+                <div class="button-row">
+                  <a [routerLink]="routerLink"
+                     class="button">Explore</a>
+                </div>
+              </div>
+            </div>
+            <div class="accommodation-type_image-wrapper">
+              <img [src]="backgroundImgSource"
+                   loading="lazy"
+                   alt=""
+                   class="accommodation-type_image"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
