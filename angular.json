@@ -107,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "spinning-reel-angular"
+  "cli": {
+    "analytics": false
+  }
 }

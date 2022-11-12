@@ -20,7 +20,8 @@ import { BeachCottagesComponent } from './accommodation/pages/beach-cottages/bea
 import { AccommodationOptionMediumComponent } from './accommodation/accommodation-options/accommodation-option-medium/accommodation-option-medium.component';
 import { AccommodationOptionLargeComponent } from './accommodation/accommodation-options/accommodation-option-large/accommodation-option-large.component';
 import { AccommodationOptionSmallComponent } from './accommodation/accommodation-options/accommodation-option-small/accommodation-option-small.component';
-// import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -46,8 +47,9 @@ import { AccommodationOptionSmallComponent } from './accommodation/accommodation
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // NgbPaginationModule,
-    // NgbAlertModule
+    NgbModule,
+    NgbPaginationModule,
+    NgbAlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]
