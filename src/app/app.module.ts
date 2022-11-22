@@ -20,8 +20,8 @@ import { BeachCottagesComponent } from './accommodation/pages/beach-cottages/bea
 import { AccommodationOptionMediumComponent } from './accommodation/accommodation-options/accommodation-option-medium/accommodation-option-medium.component';
 import { AccommodationOptionLargeComponent } from './accommodation/accommodation-options/accommodation-option-large/accommodation-option-large.component';
 import { AccommodationOptionSmallComponent } from './accommodation/accommodation-options/accommodation-option-small/accommodation-option-small.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { AmenitiesComponent } from './accommodation/pages/components/amenities/amenities.component';
+import { AccommodationCarouselComponent } from './accommodation/pages/components/accommodation-carousel/accommodation-carousel.component';
 
 @NgModule({
   declarations: [
@@ -42,14 +42,13 @@ import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap'
     BeachCottagesComponent,
     AccommodationOptionLargeComponent,
     AccommodationOptionMediumComponent,
-    AccommodationOptionSmallComponent
+    AccommodationOptionSmallComponent,
+    AmenitiesComponent,
+    AccommodationCarouselComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    NgbPaginationModule,
-    NgbAlertModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

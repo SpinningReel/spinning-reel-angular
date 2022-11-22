@@ -1,0 +1,56 @@
+<div class="page-padding a-item-section-details">
+  <div class="container-large">
+    <div class="padding-vertical padding-large">
+      <div class="w-layout-grid a-item-details_component">
+        <div class="a-item-details_content">
+          <div class="margin-bottom margin-small">
+            <h2>Overview</h2>
+          </div>
+          <div class="margin-bottom margin-small">
+            <p class="text-size-medium">{{overview}}</p>
+          </div>
+          <div class="text-size-medium w-richtext">
+            <p>All units have:</p>
+            <ul role="list">
+              <li>Fantastic sea views</li>
+              <li>Access to tennis court on the premises</li>
+              <li>Kiddies tidal pool, ideal for little ones</li>
+              <li>Private access to the beach</li>
+              <li>Close to golf course</li>
+            </ul>
+          </div>
+          <div class="margin-top margin-medium">
+            <div class="button-row">
+              <a [href]="bookingLink"
+                 class="button-secondary w-button">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="a-item-details_features-wrapper">
+          <div class="a-item-details_list-wrapper w-dyn-list">
+            <div *ngFor="let amenity of amenities"
+                 class="a-item-details_list w-dyn-items">
+              <div class="a-item-details_item w-dyn-item">
+                <div class="a-item-details_item-wrapper">
+                  <img [src]="amenity.src"
+                       loading="lazy"
+                       alt=""
+                       class="icon-1x1-xsmall">
+                  <div class="a-item-details_item-label">
+                    <p>{{amenity.detail}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="amenities.length <=0"
+                 class="w-dyn-empty">
+              <div>No items found.</div>
+            </div>
+          </div>
+          <p class="text-size-small">Rates vary due to the different types of accommodation and according to the
+            number of people. We offer great value for money. Please contact us for a firm price.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
