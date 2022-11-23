@@ -83,13 +83,15 @@
   </div>
   <div [ngClass]="isSummary ? 'hide' : 'home-header_content-wrapper'">
     <div class="padding-vertical padding-xhuge">
-      <div class="margin-bottom margin-xxsmall">
+      <div *ngIf="isMainHeader"
+           class="margin-bottom margin-xxsmall">
         <h4 class="text-color-white">Port Alfred</h4>
       </div>
       <div class="margin-bottom margin-small">
-        <h1 class="text-color-white">Secluded beach cottages</h1>
+        <h1 class="text-color-white">{{headerSummary}}</h1>
       </div>
-      <div class="margin-top margin-medium">
+      <div *ngIf="isMainHeader"
+           class="margin-top margin-medium">
         <div class="button-row">
           <a routerLink="/booking"
              class="button is-alternate">Book now</a>
@@ -100,7 +102,7 @@
       <div class="home-header_overlay-wrapper">
         <div class="home-header_overlay"></div>
       </div>
-      <img src="../../assets/img/Spinning-Reel-Beach.jpg"
+      <img [src]="backgroundImgSrc"
            loading="lazy"
            alt="A bird&#x27;s eye view of the beach and coast with Spinning Reel cottages just behind the sand dunes"
            class="home-header_background-image">

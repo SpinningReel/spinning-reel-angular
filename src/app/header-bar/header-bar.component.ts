@@ -12,6 +12,15 @@ export class HeaderBarComponent implements OnInit {
   @Input()
   isBooking: boolean = false;
 
+  @Input()
+  isMainHeader: boolean = true;
+
+  @Input()
+  backgroundImgSrc: string = "../../assets/img/Spinning-Reel-Beach.jpg";
+
+  @Input()
+  headerSummary: string = "Secluded beach cottages";
+
   @HostListener('click', ['$event'])
   clickInside($event: any) {
     $event.stopPropagation();

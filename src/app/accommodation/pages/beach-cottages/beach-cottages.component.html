@@ -1,4 +1,6 @@
-<app-header-bar></app-header-bar>
+<app-header-bar [isMainHeader]="false"
+                backgroundImgSrc="../../../assets/img/cottage/cottage-view.jpg"
+                headerSummary="SECLUDED, SELF CATERING BEACH COTTAGES"></app-header-bar>
 
 <app-amenities bookingLink="/booking"
                [amenities]="features"
@@ -8,17 +10,11 @@ setting. Our beach cottages have 2 bedrooms, a lounge / dining area, bathroom, k
 
 <app-accommodation-carousel [images]="imageSrcList"></app-accommodation-carousel>
 
-<div class="container-large">
-  <div class="padding-vertical padding-xhuge">
-    <div class="page-padding">
-      <div class="margin-bottom margin-xhuge">
-        <h2>Other Accommodation</h2>
-      </div>
-    </div>
-    <div class="a-item-accomodation_component">
-      <app-accommodation-option-large-grid [hasBeachCottages]="false"></app-accommodation-option-large-grid>
-    </div>
+<div class="page-padding">
+  <div class="margin-xhuge">
+    <h2>Other Accommodation</h2>
   </div>
 </div>
+<app-accommodation-option-large-grid [hasBeachCottages]="false"></app-accommodation-option-large-grid>
 
 <app-footer></app-footer>
