@@ -22,6 +22,7 @@ import { AccommodationOptionLargeComponent } from './accommodation/accommodation
 import { AccommodationOptionSmallComponent } from './accommodation/accommodation-options/accommodation-option-small/accommodation-option-small.component';
 import { AmenitiesComponent } from './accommodation/pages/components/amenities/amenities.component';
 import { AccommodationCarouselComponent } from './accommodation/pages/components/accommodation-carousel/accommodation-carousel.component';
+import { AccommodationOptionLargeGridComponent } from './accommodation/accommodation-options/accommodation-option-large-grid/accommodation-option-large-grid.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AccommodationCarouselComponent } from './accommodation/pages/components
     AccommodationOptionMediumComponent,
     AccommodationOptionSmallComponent,
     AmenitiesComponent,
-    AccommodationCarouselComponent
+    AccommodationCarouselComponent,
+    AccommodationOptionLargeGridComponent
   ],
   imports: [
     BrowserModule,

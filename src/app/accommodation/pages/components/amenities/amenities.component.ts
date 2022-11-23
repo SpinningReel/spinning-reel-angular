@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Amenity } from 'src/app/model/amenity.model';
 
 @Component({
   selector: 'app-amenities',

@@ -1,27 +1,5 @@
 @use '../../../styles/common.scss';
 
-
-.accommodation_component {
-  position: relative;
-}
-
-.accommodation_list {
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
-  -webkit-box-align: start;
-  -webkit-align-items: start;
-  -ms-flex-align: start;
-  align-items: start;
-  grid-auto-columns: 1fr;
-  grid-column-gap: 0rem;
-  grid-row-gap: 0rem;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: auto;
-  grid-template-rows: auto;
-}
-
 .accommodation_hover-wrapper {
   position: absolute;
   left: 0%;

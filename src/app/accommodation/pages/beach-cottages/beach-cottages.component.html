@@ -16,30 +16,7 @@ setting. Our beach cottages have 2 bedrooms, a lounge / dining area, bathroom, k
       </div>
     </div>
     <div class="a-item-accomodation_component">
-      <div class="accommodation_component">
-        <div class="accommodation_list">
-
-          <app-accommodation-option-large class="container-large"
-                                          backgroundImgSource="../../../assets/img/log-cabin/log-cabin-veranda.jpg"
-                                          accommodationDescription="Cosy beach chalets."
-                                          accommodationTitle="LOG CABINS"
-                                          routerLink="/accommodation/chalets"></app-accommodation-option-large>
-
-          <app-accommodation-option-large class="container-large"
-                                          backgroundImgSource="../../../assets/img/vermont/vermont-lounge.jpg"
-                                          accommodationDescription="A luxury alternative to the log chalet."
-                                          accommodationTitle="VERMONT CHALET"
-                                          routerLink="/accommodation/chalets"></app-accommodation-option-large>
-
-          <app-accommodation-option-large class="container-large"
-                                          backgroundImgSource="../../../assets/img/b-and-b/b-and-b-top-coffee-view.jpg"
-                                          accommodationDescription="Luxury rooms with their own entrance and great views."
-                                          accommodationTitle="BED AND BREAKFAST"
-                                          routerLink="/accommodation/bed-and-breakfast">
-          </app-accommodation-option-large>
-
-        </div>
-      </div>
+      <app-accommodation-option-large-grid [hasBeachCottages]="false"></app-accommodation-option-large-grid>
     </div>
   </div>
 </div>
