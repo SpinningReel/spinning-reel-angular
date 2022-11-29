@@ -11,14 +11,14 @@ export class BeachCottagesComponent implements OnInit {
   public features: Amenity[] = [
     { src: "../../../assets/img/svg/features/tv.svg", detail: "TV with DSTV (B&B bouquet)" },
     { src: "../../../assets/img/svg/features/bed.svg", detail: "2 Bedrooms (sleeps 6 max)" },
-    { src: "../../../assets/img/svg/features/tennis.svg", detail: "Tennis court on the premises" },
     { src: "../../../assets/img/svg/features/shower.svg", detail: "Bathroom" },
-    { src: "../../../assets/img/svg/features/golf.svg", detail: "Close to golf course" },
     { src: "../../../assets/img/svg/features/lounge.svg", detail: "Lounge / dining area" },
-    { src: "../../../assets/img/svg/features/blanket.svg", detail: "Bedding is included" },
     { src: "../../../assets/img/svg/features/cutlery.svg", detail: "Kitchen" },
-    { src: "../../../assets/img/svg/features/amenities.svg", detail: "You need to bring your own towels, toiletries, matches for the gas stove etc" },
     { src: "../../../assets/img/svg/features/braai.svg", detail: "Braai area" },
+    { src: "../../../assets/img/svg/features/blanket.svg", detail: "Bedding is included" },
+    { src: "../../../assets/img/svg/features/amenities.svg", detail: "You need to bring your own towels, toiletries, matches for the gas stove etc" },
+    { src: "../../../assets/img/svg/features/tennis.svg", detail: "Tennis court on the premises" },
+    { src: "../../../assets/img/svg/features/golf.svg", detail: "Close to golf course" },
   ];
 
   public imageSrcList: imageSrcAlt[] = [

@@ -3,20 +3,21 @@
   margin: auto;
   text-align: center;
   width: 100%;
-  max-width: 150rem;
+  max-width: 135vh;
+  max-height: 90vh;
   // border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem #dce1e1
 }
 
 .carousel-container img {
   display: none;
-  // border-radius: 1rem;
+  max-height: 90vh;
 }
 
 .carousel-container img.image-active {
   display: block;
   width: 100%;
-  max-height: 100rem;
+  max-height: 90vh;
 }
 
 .carousel-dot-container {

@@ -1,5 +1,5 @@
 <app-header-bar *ngIf="!isHomeView"
-                headerSummary="OUR COTTAGES, LOG CHALETS AND BED AND BREAKFAST"
+                headerSummary="OUR COTTAGES, CHALETS AND BED AND BREAKFAST"
                 backgroundImgSrc="../../../assets/img/vermont/vermont-lounge.jpg"></app-header-bar>
 <div *ngIf="isHomeView"
      class="container-large">
@@ -10,30 +10,26 @@
 <div *ngIf="!isHomeView"
      class="container-large">
   <div class="padding-vertical padding-xhuge">
-
-    <app-accommodation-option-medium [isEven]="true"
-                                     backgroundImgSource="../../assets/img/log-cabin/log-cabin-veranda.jpg"
-                                     accommodationDescription="These chalets have been handcrafted on site from solid logs. With a Vermont style timber frame, our chalets provide a luxury alternative to the beach cottages."
-                                     accommodationTitle="CHALETS"
-                                     routerLink="/accommodation/chalets"></app-accommodation-option-medium>
-
     <app-accommodation-option-medium [isEven]="false"
                                      backgroundImgSource="../../assets/img/vermont/vermont-lounge.jpg"
                                      accommodationDescription="With a Vermont style timber frame, our chalets provide a luxury alternative to the beach cottages."
                                      accommodationTitle="VERMONT CHALET"
-                                     routerLink="/accommodation/chalets"></app-accommodation-option-medium>
+                                     routerLink="/accommodation/vermont-chalet"></app-accommodation-option-medium>
+    <app-accommodation-option-medium [isEven]="true"
+                                     backgroundImgSource="../../assets/img/log-cabin/log-cabin-veranda.jpg"
+                                     accommodationDescription="These chalets have been handcrafted on site from solid logs. With a Vermont style timber frame, our chalets provide a luxury alternative to the beach cottages."
+                                     accommodationTitle="LOG CHALETS"
+                                     routerLink="/accommodation/log-chalets"></app-accommodation-option-medium>
     <app-accommodation-option-medium [isEven]="true"
                                      backgroundImgSource="../../assets/img/b-and-b/b-and-b-top-coffee-view.jpg"
                                      accommodationDescription="Luxury rooms with their own entrance and great views."
                                      accommodationTitle="BED AND BREAKFAST"
                                      routerLink="/accommodation/bed-and-breakfast"></app-accommodation-option-medium>
-
     <app-accommodation-option-medium [isEven]="false"
                                      backgroundImgSource="../../assets/img/cottage/cottage-entrance.jpg"
                                      accommodationDescription="Fantastic sea views in a private, natural, setting."
                                      accommodationTitle="BASIC BEACH COTTAGES"
                                      routerLink="/accommodation/beach-cottages"></app-accommodation-option-medium>
-
   </div>
 </div>
 <app-footer *ngIf="!isHomeView"></app-footer>

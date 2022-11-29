@@ -1,0 +1,19 @@
+<app-header-bar [isMainHeader]="false"
+                backgroundImgSrc="../../../assets/img/vermont/vermont-lounge.jpg"
+                headerSummary="EXQUISITE VERMONT CHALET WITH BREATHTAKING SEA VIEWS"></app-header-bar>
+
+<app-amenities bookingLink="/booking"
+               [amenities]="features"
+               overview="With a Vermont style timber frame, our chalets provide a luxury alternative to the beach cottages.">
+</app-amenities>
+
+<app-accommodation-carousel [images]="imageSrcList"></app-accommodation-carousel>
+
+<div class="page-padding">
+  <div class="margin-xhuge">
+    <h2>Other Accommodation</h2>
+  </div>
+</div>
+<app-accommodation-option-large-grid [hasVermont]="false"></app-accommodation-option-large-grid>
+
+<app-footer></app-footer>
