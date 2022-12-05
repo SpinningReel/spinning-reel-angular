@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -8,7 +7,6 @@ import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { AccommodationComponent } from './accommodation/accommodation.component';
 import { AboutComponent } from './about/about.component';
 import { AttractionsComponent } from './attractions/attractions.component';
-import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { FeatureComponent } from './feature/feature.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
@@ -24,37 +22,38 @@ import { AmenitiesComponent } from './accommodation/pages/components/amenities/a
 import { AccommodationCarouselComponent } from './accommodation/pages/components/accommodation-carousel/accommodation-carousel.component';
 import { AccommodationOptionLargeGridComponent } from './accommodation/accommodation-options/accommodation-option-large-grid/accommodation-option-large-grid.component';
 import { VermontComponent } from './accommodation/pages/vermont/vermont.component';
+import { TestimonialCarouselComponent } from "./testimonial-carousel/testimonial-carousel.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    HeaderBarComponent,
-    AccommodationComponent,
-    AboutComponent,
-    AttractionsComponent,
-    TestimonialsComponent,
-    FeatureComponent,
-    FooterComponent,
-    ContactComponent,
-    BookingComponent,
-    AccommodationGridComponent,
-    BedAndBreakfastComponent,
-    ChaletsComponent,
-    BeachCottagesComponent,
-    AccommodationOptionLargeComponent,
-    AccommodationOptionMediumComponent,
-    AccommodationOptionSmallComponent,
-    AmenitiesComponent,
-    AccommodationCarouselComponent,
-    AccommodationOptionLargeGridComponent,
-    VermontComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        HeaderBarComponent,
+        AccommodationComponent,
+        AboutComponent,
+        AttractionsComponent,
+        TestimonialCarouselComponent,
+        FeatureComponent,
+        FooterComponent,
+        ContactComponent,
+        BookingComponent,
+        AccommodationGridComponent,
+        BedAndBreakfastComponent,
+        ChaletsComponent,
+        BeachCottagesComponent,
+        AccommodationOptionLargeComponent,
+        AccommodationOptionMediumComponent,
+        AccommodationOptionSmallComponent,
+        AmenitiesComponent,
+        AccommodationCarouselComponent,
+        AccommodationOptionLargeGridComponent,
+        VermontComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule
+    ]
 })
 export class AppModule { }

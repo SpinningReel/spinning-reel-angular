@@ -1,0 +1,197 @@
+@use '../../styles/common.scss';
+
+.carousel-container {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  min-height: 70vh;
+  // box-shadow: 0 0.5rem 1rem #dce1e1;
+}
+
+.content-container {
+  display: none;
+  max-height: 90vh;
+}
+
+.image-active {
+  display: block;
+  width: 100%;
+  max-height: 90vh;
+}
+
+.content {
+  display: flex;
+  max-width: 48rem;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.fade {
+  animation: fade 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+}
+
+.rating-svg {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.rating-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial {
+  text-align: center;
+  color: #fff;
+}
+
+.client {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.client-name {
+  // color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+
+.carousel-dot-container {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.dot {
+  cursor: pointer;
+  height: 0.8rem;
+  width: 0.8rem;
+  margin: 0 0.3rem;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: opacity 0.6s ease;
+  opacity: 0.5;
+}
+
+.active,
+.dot:hover {
+  opacity: 1;
+}
+
+.btn-carousel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-prev {
+  left: 0;
+}
+
+.btn-next {
+  right: 0;
+}
+
+.arrow {
+  display: block;
+  border-left: 0.1em solid white;
+  border-bottom: 0.1em solid white;
+  width: 0.5em;
+  height: 0.5em;
+
+  &.left {
+    transform: rotate(45deg);
+  }
+
+  &.right {
+    transform: rotate(225deg);
+  }
+}
+
+.icon-carousel {
+  color: #fff;
+  opacity: 0.5;
+  transition: all 0.15s ease;
+}
+
+.icon-carousel:hover {
+  opacity: 0.9;
+}
+
+.icon-carousel:active {
+  opacity: 0.5;
+}
+
+.icon-next,
+.icon-prev {
+  font-size: 2rem;
+}
+
+.background-image-wrapper {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: -1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.background-image {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: contrast(200%) grayscale(100%);
+  filter: contrast(200%) grayscale(100%);
+  -o-object-fit: cover;
+  object-fit: cover;
+}
