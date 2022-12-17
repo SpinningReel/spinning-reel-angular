@@ -40,22 +40,22 @@
                class="navbar-link w-nav-link">Contact</a>
           </li>
           <li>
-            <!-- Tablet only booking button -->
+            <!-- Burger menu only booking button -->
             <a [ngClass]="isSummary ? 'text-color-black' : ''"
                routerLink="/booking"
                (click)="navToggle()"
-               class="navbar-link w-nav-link invisible-for-desktop">Book Now</a>
+               class="navbar-link w-nav-link invisible-after-tablet">Book Now</a>
           </li>
         </ul>
       </nav>
 
       <!-- Three bar burger button -->
       <label for="nav-toggle"
-             class="nav-toggle-label invisible-for-desktop">
+             class="nav-toggle-label invisible-after-tablet">
         <span></span>
       </label>
 
-      <!-- Desktop only booking button -->
+      <!-- Tablet booking button -->
       <div *ngIf="!isSummary"
            class="booking-button invisible-before-tablet ease-in-out-smooth">
         <a routerLink="/booking"

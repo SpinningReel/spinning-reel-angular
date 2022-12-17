@@ -21,6 +21,11 @@ export class HeaderBarComponent implements OnInit {
   @Input()
   headerSummary: string = "Secluded beach cottages";
 
+  @HostListener('click', ['$event'])
+  click() {
+    this.isChecked = false;
+  }
+
   @HostListener('click', ['$event.target'])
   clickTarget() {
     this.isChecked = false;

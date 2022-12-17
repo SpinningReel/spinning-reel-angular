@@ -163,7 +163,7 @@ nav a {
   height: 0.1rem;
   width: 1.5rem;
   border-radius: 2px;
-  position: relative;   
+  position: relative;
   margin-left: auto;
   margin-right: auto;
 }
@@ -185,7 +185,7 @@ nav a {
 .navbar-logo-link {
   display: flex;
   flex-direction: column;
-  justify-content: center;    
+  justify-content: center;
   max-width: 20rem;
   margin-left: auto;
   margin-right: auto;
@@ -214,20 +214,9 @@ nav a {
 }
 
 .home-header_content-wrapper {
-  z-index: 2;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  //   height: 100vh;
-  max-height: 60rem;
-  min-height: 33rem;
   padding-right: 2.5rem;
   padding-left: 2.5rem;
-  -webkit-box-align: flex-end;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
 }
 
 .home-header_background-wrapper {
@@ -310,10 +299,6 @@ nav a {
 }
 
 @media screen and (max-width: 991px) {
-  .invisible-before-tablet {
-    display: none;
-  }
-
   .header-contact.is-booking {
     height: auto;
     margin-top: 1rem;
@@ -335,7 +320,7 @@ nav a {
 }
 
 @media screen and (min-width: 767px) {
-  .invisible-for-desktop {
+  .invisible-after-tablet {
     display: none;
   }
 
@@ -378,6 +363,10 @@ nav a {
 }
 
 @media screen and (max-width: 767px) {
+  .invisible-before-tablet {
+    display: none;
+  }
+
   .header-contact {
     position: static;
     display: none;
