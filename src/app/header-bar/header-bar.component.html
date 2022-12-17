@@ -39,46 +39,59 @@
                (click)="navToggle()"
                class="navbar-link w-nav-link">Contact</a>
           </li>
+          <li>
+            <!-- Tablet only booking button -->
+            <a [ngClass]="isSummary ? 'text-color-black' : ''"
+               routerLink="/booking"
+               (click)="navToggle()"
+               class="navbar-link w-nav-link invisible-for-desktop">Book Now</a>
+          </li>
         </ul>
       </nav>
 
+      <!-- Three bar burger button -->
       <label for="nav-toggle"
-             class="nav-toggle-label">
+             class="nav-toggle-label invisible-for-desktop">
         <span></span>
       </label>
 
-      <a *ngIf="isSummary"
-         routerLink="/home"
-         aria-current="page"
-         class="navbar_logo-link w-nav-brand w--current">
-        <img src="../../assets/img/svg/Logo-markblack.svg"
-             loading="lazy"
-             alt=""
-             class="navbar_logo">
-        <img src="../../assets/img/svg/Logo.svg"
-             loading="lazy"
-             alt=""
-             class="navbar_logo">
-      </a>
-
-      <a *ngIf="!isSummary"
-         routerLink="/home"
-         aria-current="page"
-         class="navbar_logo-link w-nav-brand w--current">
-        <img src="../../assets/img/svg/Logo-markwhite.svg"
-             loading="lazy"
-             alt=""
-             class="navbar_logo">
-        <img src="../../assets/img/svg/Logowhite.svg"
-             loading="lazy"
-             alt=""
-             class="navbar_logo">
-      </a>
+      <!-- Desktop only booking button -->
       <div *ngIf="!isSummary"
-           class="booking-button">
+           class="booking-button invisible-before-tablet ease-in-out-smooth">
         <a routerLink="/booking"
            class="button is-alternate">Book Now</a>
       </div>
+    </div>
+    <div class="navbar-icon">
+      <!-- Black Spinning reel logo -->
+      <a *ngIf="isSummary"
+         routerLink="/home"
+         aria-current="page"
+         class="navbar-logo-link">
+        <img src="../../assets/img/svg/Logo-markblack.svg"
+             loading="lazy"
+             alt=""
+             class="navbar-logo">
+        <img src="../../assets/img/svg/Logo.svg"
+             loading="lazy"
+             alt=""
+             class="navbar-logo-text">
+      </a>
+
+      <!-- White Spinning reel logo -->
+      <a *ngIf="!isSummary"
+         routerLink="/home"
+         aria-current="page"
+         class="navbar-logo-link">
+        <img src="../../assets/img/svg/Logo-markwhite.svg"
+             loading="lazy"
+             alt=""
+             class="navbar-logo">
+        <img src="../../assets/img/svg/Logowhite.svg"
+             loading="lazy"
+             alt=""
+             class="navbar-logo-text">
+      </a>
     </div>
   </div>
   <div [ngClass]="isSummary ? 'hide' : 'home-header_content-wrapper'">
@@ -104,7 +117,7 @@
       </div>
       <img [src]="backgroundImgSrc"
            loading="lazy"
-           alt="A bird&#x27;s eye view of the beach and coast with Spinning Reel cottages just behind the sand dunes"
+           alt="A bird's eye view of the beach and coast with Spinning Reel cottages just behind the sand dunes"
            class="home-header_background-image">
     </div>
   </div>

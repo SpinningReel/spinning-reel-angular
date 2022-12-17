@@ -21,18 +21,13 @@ export class HeaderBarComponent implements OnInit {
   @Input()
   headerSummary: string = "Secluded beach cottages";
 
-  @HostListener('click', ['$event'])
-  clickInside($event: any) {
-    $event.stopPropagation();
-  }
-
-  @HostListener('document:click', ['$event'])
-  clickOutside() {
+  @HostListener('click', ['$event.target'])
+  clickTarget() {
     this.isChecked = false;
   }
 
   @HostListener('document:scroll', ['$event'])
-  scrollOutside() {
+  scroll() {
     this.isChecked = false;
   }
 
