@@ -1,124 +1,110 @@
-<div class="header-container">
-  <div [ngClass]="isBooking ? 'header-contact is-booking':'header-contact'">
-    <a href="mailto:info@spinningreel.co.za?subject=Info"
-       class="contact-link w-inline-block">
-      <img src="../../assets/img/svg/email.svg"
-           loading="lazy"
-           alt=""
-           class="icon-x-small">
-      <div>info@spinningreel.co.za</div>
-    </a>
-    <a href="tel:+270466244281"
-       class="contact-link w-inline-block">
-      <img src="../../assets/img/svg/phone.svg"
-           loading="lazy"
-           alt=""
-           class="icon-x-small">
-      <div>+27 (046) 624 4281</div>
-    </a>
-  </div>
-  <div class="navbar-container">
-    <div class="navbar-content">
-      <input title="toggle"
-             type="checkbox"
-             [checked]="isChecked"
-             (change)="navToggle()"
-             id="nav-toggle"
-             class="nav-toggle" />
-      <nav>
-        <ul>
-          <li>
-            <a [ngClass]="isSummary ? 'text-color-black' : ''"
-               routerLink="/accommodation"
-               (click)="navToggle()"
-               class="navbar-link w-nav-link">Accommodation</a>
-          </li>
-          <li>
-            <a [ngClass]="isSummary ? 'text-color-black' : ''"
-               routerLink="/contact"
-               (click)="navToggle()"
-               class="navbar-link w-nav-link">Contact</a>
-          </li>
-          <li>
-            <!-- Burger menu only booking button -->
-            <a [ngClass]="isSummary ? 'text-color-black' : ''"
-               routerLink="/booking"
-               (click)="navToggle()"
-               class="navbar-link w-nav-link invisible-after-tablet">Book Now</a>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- Three bar burger button -->
-      <label for="nav-toggle"
-             class="nav-toggle-label invisible-after-tablet">
-        <span></span>
-      </label>
-
-      <!-- Tablet booking button -->
-      <div *ngIf="!isSummary"
-           class="booking-button invisible-before-tablet ease-in-out-smooth">
-        <a routerLink="/booking"
-           class="button is-alternate">Book Now</a>
-      </div>
+<div [ngClass]="isSummary ? 'small-header-container' : 'header-container'">
+  <div class="header-nav">
+    <div [ngClass]="isBooking ? 'header-contact is-booking':'header-contact'">
+      <a href="mailto:info@spinningreel.co.za?subject=Info"
+         class="contact-link w-inline-block">
+        <img src="../../assets/img/svg/email.svg"
+             loading="lazy"
+             alt=""
+             class="icon-x-small">
+        <div>info@spinningreel.co.za</div>
+      </a>
+      <a href="tel:+270466244281"
+         class="contact-link w-inline-block">
+        <img src="../../assets/img/svg/phone.svg"
+             loading="lazy"
+             alt=""
+             class="icon-x-small">
+        <div>+27 (046) 624 4281</div>
+      </a>
     </div>
-    <div class="navbar-icon">
-      <!-- Black Spinning reel logo -->
-      <a *ngIf="isSummary"
-         routerLink="/home"
-         aria-current="page"
-         class="navbar-logo-link">
-        <img src="../../assets/img/svg/Logo-markblack.svg"
-             loading="lazy"
-             alt=""
-             class="navbar-logo">
-        <img src="../../assets/img/svg/Logo.svg"
-             loading="lazy"
-             alt=""
-             class="navbar-logo-text">
-      </a>
+    <div class="navbar-container">
+      <div class="navbar-content">
+        <input title="toggle"
+               type="checkbox"
+               [checked]="isChecked"
+               (change)="navToggle()"
+               id="nav-toggle"
+               class="nav-toggle" />
+        <nav>
+          <ul>
+            <li>
+              <a [ngClass]="isSummary ? 'text-color-black' : ''"
+                 routerLink="/accommodation"
+                 (click)="navToggle()"
+                 class="navbar-link w-nav-link">Accommodation</a>
+            </li>
+            <li>
+              <a [ngClass]="isSummary ? 'text-color-black' : ''"
+                 routerLink="/contact"
+                 (click)="navToggle()"
+                 class="navbar-link w-nav-link">Contact</a>
+            </li>
+            <li>
+              <!-- Burger menu only booking button -->
+              <a [ngClass]="isSummary ? 'text-color-black' : ''"
+                 routerLink="/booking"
+                 (click)="navToggle()"
+                 class="navbar-link w-nav-link invisible-after-tablet">Book Now</a>
+            </li>
+          </ul>
+        </nav>
 
-      <!-- White Spinning reel logo -->
-      <a *ngIf="!isSummary"
-         routerLink="/home"
-         aria-current="page"
-         class="navbar-logo-link">
-        <img src="../../assets/img/svg/Logo-markwhite.svg"
-             loading="lazy"
-             alt=""
-             class="navbar-logo">
-        <img src="../../assets/img/svg/Logowhite.svg"
-             loading="lazy"
-             alt=""
-             class="navbar-logo-text">
-      </a>
+        <!-- Three bar burger button -->
+        <label for="nav-toggle"
+               class="nav-toggle-label invisible-after-tablet">
+          <span></span>
+        </label>
+
+        <!-- Tablet booking button -->
+        <div *ngIf="!isSummary"
+             class="booking-button invisible-before-tablet ease-in-out-smooth">
+          <a routerLink="/booking"
+             class="button is-alternate">Book Now</a>
+        </div>
+      </div>
+      <div class="navbar-icon">
+        <!-- White Spinning reel logo -->
+        <a routerLink="/home"
+           aria-current="page"
+           class="navbar-logo-link">
+          <img src="../../assets/img/svg/Logo-markwhite.svg"
+               loading="lazy"
+               alt=""
+               class="navbar-logo">
+          <img src="../../assets/img/svg/Logowhite.svg"
+               loading="lazy"
+               alt=""
+               class="navbar-logo-text">
+        </a>
+      </div>
     </div>
   </div>
   <div [ngClass]="isSummary ? 'hide' : 'home-header_content-wrapper'">
-    <div class="padding-vertical padding-xhuge">
-      <div *ngIf="isMainHeader"
-           class="margin-bottom margin-xxsmall">
-        <h4 class="text-color-white">Port Alfred</h4>
-      </div>
-      <div class="margin-bottom margin-small">
-        <h1 class="text-color-white">{{headerSummary}}</h1>
-      </div>
-      <div *ngIf="isMainHeader"
-           class="margin-top margin-medium">
-        <div class="button-row">
-          <a routerLink="/booking"
-             class="button is-alternate">Book now</a>
-        </div>
-      </div>
+    <div *ngIf="isMainHeader"
+         class="margin-bottom margin-xxsmall">
+      <h4 class="text-color-white">Port Alfred</h4>
     </div>
-    <div class="home-header_background-wrapper">
-      <div class="home-header_overlay-wrapper">
-        <div class="home-header_overlay"></div>
+    <div class="margin-bottom margin-small">
+      <h1 class="text-color-white">{{headerSummary}}</h1>
+    </div>
+    <div *ngIf="isMainHeader"
+         class="margin-top margin-medium">
+      <div class="button-row">
+        <a routerLink="/booking"
+           class="button is-alternate">Book now</a>
       </div>
-      <img [src]="backgroundImgSrc"
-           loading="lazy"
-           alt="A bird's eye view of the beach and coast with Spinning Reel cottages just behind the sand dunes"
-           class="home-header_background-image">
     </div>
   </div>
+</div>
+
+<div *ngIf="!isSummary"
+     class="home-header_background-wrapper">
+  <div class="home-header_overlay-wrapper">
+    <div class="home-header_overlay"></div>
+  </div>
+  <img [src]="backgroundImgSrc"
+       loading="lazy"
+       alt="A bird's eye view of the beach and coast with Spinning Reel cottages just behind the sand dunes"
+       class="home-header_background-image">
 </div>

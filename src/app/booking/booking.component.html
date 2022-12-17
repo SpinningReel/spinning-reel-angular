@@ -1,8 +1,20 @@
-<app-header-bar [isBooking]="true"
-                [isSummary]="true"></app-header-bar>
-<section class="booking-section-contact">
-  <div class="page-padding">
+  <div class="booking-section-contact page-padding">
     <div class="container-small">
+      <!-- Black Spinning reel logo -->
+      <div>
+        <a routerLink="/home"
+           aria-current="page"
+           class="navbar-logo-link">
+          <img src="../../assets/img/svg/Logo-markblack.svg"
+               loading="lazy"
+               alt=""
+               class="navbar-logo">
+          <img src="../../assets/img/svg/Logo.svg"
+               loading="lazy"
+               alt=""
+               class="navbar-logo-text">
+        </a>
+      </div>
       <div class="padding-vertical padding-xhuge">
         <div class="margin-bottom margin-large">
           <div class="text-align-center">
@@ -170,5 +182,4 @@
       </div>
     </div>
   </div>
-</section>
-<app-footer></app-footer>
+  <app-footer></app-footer>

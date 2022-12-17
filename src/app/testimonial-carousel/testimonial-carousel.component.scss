@@ -6,7 +6,6 @@
   text-align: center;
   width: 100%;
   min-height: 70vh;
-  // box-shadow: 0 0.5rem 1rem #dce1e1;
 }
 
 .content-container {
@@ -63,6 +62,11 @@
   justify-content: center;
 }
 
+.testimonial-container {
+  margin: 3rem;
+  box-sizing: border-box;
+}
+
 .testimonial {
   text-align: center;
   color: #fff;
@@ -75,14 +79,11 @@
 }
 
 .client-name {
-  // color: #fff;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-
-
 
 .carousel-dot-container {
   position: absolute;
