@@ -17,9 +17,6 @@
 }
 
 .contact-link_contents {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   grid-column-gap: 0.75rem;
 }
@@ -53,12 +50,26 @@
   align-items: flex-start;
 }
 
-.contact-link_contents {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.navbar-icon {
+  display: inline;
+}
+
+.navbar-logo-link {
   display: flex;
-  grid-column-gap: 0.75rem;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-logo {
+  max-height: 10rem;
+}
+
+.navbar-logo-text {
+  max-height: 2rem;
+  margin-top: 1rem;
 }
 
 .w-embed:before,
@@ -1940,6 +1951,9 @@
   height: 1rem;
 }
 
+.icon-1x1-xsmall {
+  margin-bottom: auto;
+}
 
 .icon-1x1-small {
   width: 2rem;
@@ -3204,12 +3218,6 @@
   grid-template-rows: auto;
 }
 
-
-.home-header-description {
-  width: 100%;
-  max-width: 48rem;
-}
-
 .header-description_component {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3765,7 +3773,7 @@
 }
 
 .booking-section-contact {
-  padding-top: 10rem;
+  padding-top: 6rem;
   background-image: url('../assets/img/Spinning-Reel-PA-PamGPA-31-of-191.png');
   background-position: 50% 50%;
   background-size: cover;
@@ -3897,6 +3905,7 @@
   z-index: 0;
   width: 90%;
   height: 100%;
+  max-height: 90vh;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.6)), to(transparent));
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.6), transparent);
 }
@@ -3919,12 +3928,6 @@
     top: 3rem;
     right: 3rem;
     bottom: 3rem;
-  }
-
-  .home-header-description {
-    max-width: 44rem;
-    margin-right: auto;
-    margin-left: auto;
   }
 
   .header-description_component {

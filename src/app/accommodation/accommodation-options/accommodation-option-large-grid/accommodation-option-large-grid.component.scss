@@ -20,3 +20,9 @@
   -ms-grid-rows: auto;
   grid-template-rows: auto;
 }
+
+@media screen and (max-width: 767px) {
+  .accommodation_list {
+    display: block;
+  }
+}
