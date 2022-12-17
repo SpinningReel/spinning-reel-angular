@@ -7,5 +7,19 @@
     "not ie 11",
     "not ios_saf <= 15.3",
     "not safari <= 15.3"
-  ]
+  ],
+  "hints": {
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off"
+      }
+    ],
+    "axe/text-alternatives": [
+      "default",
+      {
+        "frame-title": "off"
+      }
+    ]
+  }
 }
