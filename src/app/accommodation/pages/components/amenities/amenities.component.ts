@@ -9,6 +9,9 @@ import { Amenity } from 'src/app/model/amenity.model';
 export class AmenitiesComponent implements OnInit {
 
   @Input()
+  isEmailReady: boolean = false;
+  
+  @Input()
   public amenities!: Amenity[];
 
   @Input()

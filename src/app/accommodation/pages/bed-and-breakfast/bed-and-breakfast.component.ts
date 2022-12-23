@@ -9,7 +9,8 @@ import { imageSrcAlt } from 'src/app/model/image-src-alt.model';
 })
 export class BedAndBreakfastComponent implements OnInit {
   public features: Amenity[] = [
-    { src: "../../../assets/img/svg/features/tv.svg", detail: "TV with DSTV (B&B bouquet)" },
+    { src: "../../../assets/img/svg/features/tv.svg", detail: "TV with android smart box (Netflix included)" },
+    { src: "../../../assets/img/svg/features/wifi.svg", detail: "Uncapped Wifi" },
     { src: "../../../assets/img/svg/features/bed.svg", detail: "1 Bedroom" },
     { src: "../../../assets/img/svg/features/shower.svg", detail: "Ensuite bathroom" },
     { src: "../../../assets/img/svg/features/cutlery.svg", detail: "Kitchenette" },

@@ -16,13 +16,14 @@
             <div class="margin-bottom margin-medium">
               <div class="footer_details-wrapper">
                 <a href="https://g.page/TheSpinningReel?share"
+                   target="_blank"
                    class="contact-link align-top w-inline-block">
                   <div class="contact-link_contents">
                     <img src="../../assets/img/svg/icon-location.svg"
                          loading="lazy"
                          alt=""
                          class="icon-1x1-xsmall">
-                    <div>Freshwater Road, Port Alfred<br>Eastern Cape<br>6170<br>South Africa</div>
+                    <div>10 Freshwater Road, Port Alfred<br>Eastern Cape<br>6170<br>South Africa</div>
                   </div>
                 </a>
                 <div class="footer_contact-list">
@@ -46,7 +47,8 @@
               </div>
             </div>
             <div class="w-layout-grid footer_social-list">
-              <a routerLink="/home"
+              <a target="_blank"
+                 href="https://www.facebook.com/profile.php?id=100063486341899&mibextid=LQQJ4d"
                  class="footer_social-link w-inline-block">
                 <div class="social-icon w-embed">
                   <svg width="24"
@@ -59,7 +61,8 @@
                   </svg>
                 </div>
               </a>
-              <a routerLink="/home"
+              <a target="_blank"
+                 href="https://www.instagram.com/spinningreelbeachcottages/"
                  class="footer_social-link w-inline-block">
                 <div class="social-icon w-embed">
                   <svg width="24"
@@ -80,7 +83,8 @@
             <div class="footer_link-list">
               <a routerLink="/accommodation"
                  class="footer_link">Accommodation</a>
-              <a routerLink="/booking"
+              <a *ngIf="isEmailReady"
+                 routerLink="/booking"
                  class="footer_link">Booking</a>
               <a routerLink="/contact"
                  class="footer_link">Contact</a>
@@ -91,9 +95,10 @@
       <div class="line-divider"></div>
       <div class="padding-top padding-medium">
         <div class="footer_bottom-wrapper">
-          <div class="footer_credit-text">© 2022 Spinning Reel. All rights reserved. Designed and built by
+          <div class="footer_credit-text">© 2022 Spinning Reel. All rights reserved. Designed by
             <a href="https://daniellun.com"
                class="footer_credit-design">Daniel Lun</a>
+            and built by Kelby Tansley
           </div>
           <div class="w-layout-grid footer_legal-list">
             <a href="privacy-policy.html"

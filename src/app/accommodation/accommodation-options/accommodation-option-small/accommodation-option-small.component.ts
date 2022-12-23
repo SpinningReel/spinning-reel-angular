@@ -14,7 +14,7 @@ export class AccommodationOptionSmallComponent implements OnInit {
   accommodationTitle: string | undefined;
 
   @Input()
-  routerLink: string | undefined;
+  routerLinkPath: string | undefined;
   
   constructor() { }
 

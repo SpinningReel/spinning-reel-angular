@@ -19,10 +19,16 @@
               <li>Close to golf course</li>
             </ul>
           </div>
-          <div class="margin-top margin-medium">
+          <div *ngIf="isEmailReady" class="margin-top margin-medium">
             <div class="button-row">
               <a routerLink="/booking"
                  class="button-tertiary is-alternate">Book now</a>
+            </div>
+          </div>
+          <div *ngIf="!isEmailReady" class="margin-top margin-medium">
+            <div class="button-row">
+              <a routerLink="/contact"
+                 class="button-tertiary is-alternate">Contact Us</a>
             </div>
           </div>
         </div>

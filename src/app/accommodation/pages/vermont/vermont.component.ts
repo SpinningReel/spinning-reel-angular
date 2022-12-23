@@ -10,7 +10,8 @@ import { imageSrcAlt } from 'src/app/model/image-src-alt.model';
 export class VermontComponent implements OnInit {
   public features: Amenity[] = [
     { src: "../../../assets/img/svg/features/home.svg", detail: "Fully equipped (Comfortably but simply furnished)" },
-    { src: "../../../assets/img/svg/features/tv.svg", detail: "TV with DSTV (B&B bouquet)" },
+    { src: "../../../assets/img/svg/features/tv.svg", detail: "TV with android smart box (Netflix included)" },
+    { src: "../../../assets/img/svg/features/wifi.svg", detail: "Uncapped Wifi" },
     { src: "../../../assets/img/svg/features/bed.svg", detail: "3 Bedrooms / Sleeping areas" },
     { src: "../../../assets/img/svg/features/shower.svg", detail: "2 Bathrooms" },
     { src: "../../../assets/img/svg/features/lounge.svg", detail: "Lounge / dining area" },

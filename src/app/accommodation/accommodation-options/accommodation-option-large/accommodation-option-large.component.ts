@@ -17,7 +17,7 @@ export class AccommodationOptionLargeComponent implements OnInit {
   accommodationDescription: string | undefined;
 
   @Input()
-  routerLink: string | undefined;
+  routerLinkPath: string | undefined;
 
   constructor() { }
 

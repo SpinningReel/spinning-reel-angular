@@ -7,6 +7,9 @@ import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@
 })
 export class HeaderBarComponent implements OnInit {
   @Input()
+  isEmailReady: boolean = false;
+
+  @Input()
   isSummary: boolean = false;
 
   @Input()

@@ -9,7 +9,8 @@ import { imageSrcAlt } from 'src/app/model/image-src-alt.model';
 })
 export class BeachCottagesComponent implements OnInit {
   public features: Amenity[] = [
-    { src: "../../../assets/img/svg/features/tv.svg", detail: "TV with DSTV (B&B bouquet)" },
+    { src: "../../../assets/img/svg/features/tv.svg", detail: "TV with android smart box (Netflix included)" },
+    { src: "../../../assets/img/svg/features/wifi.svg", detail: "Uncapped Wifi" },
     { src: "../../../assets/img/svg/features/bed.svg", detail: "2 Bedrooms (sleeps 6 max)" },
     { src: "../../../assets/img/svg/features/shower.svg", detail: "Bathroom" },
     { src: "../../../assets/img/svg/features/lounge.svg", detail: "Lounge / dining area" },
@@ -22,12 +23,9 @@ export class BeachCottagesComponent implements OnInit {
   ];
 
   public imageSrcList: imageSrcAlt[] = [
-    { src: "../../../assets/img/cottage/cottage-bedroom-1.jpg", alt: "Bedroom" },
-    { src: "../../../assets/img/cottage/cottage-bedroom-1.jpg", alt: "Bedroom" },
-    { src: "../../../assets/img/cottage/cottage-bedroom-1.jpg", alt: "Bedroom" },
-    { src: "../../../assets/img/cottage/cottage-bedroom-1.jpg", alt: "Bedroom" },
-    { src: "../../../assets/img/cottage/cottage-bedroom-1.jpg", alt: "Bedroom" },
-    { src: "../../../assets/img/cottage/cottage-bedroom-1.jpg", alt: "Bedroom" },
+    { src: "../../../assets/img/cottage/cottage-front-view.jpg", alt: "Bedroom" },
+    { src: "../../../assets/img/cottage/cottage-fullview.jpg", alt: "Bedroom" },
+    { src: "../../../assets/img/cottage/cottage-kitchen.jpg", alt: "Bedroom" },
     { src: "../../../assets/img/cottage/cottage-bedroom-1.jpg", alt: "Bedroom" },
     { src: "../../../assets/img/cottage/cottage-bedroom-2.jpg", alt: "Bedroom" },
     { src: "../../../assets/img/cottage/cottage-bedroom-3.jpg", alt: "Bedroom" },
