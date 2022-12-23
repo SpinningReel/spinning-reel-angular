@@ -91,10 +91,12 @@
                      class="w-form-formrecaptcha g-recaptcha g-recaptcha-error g-recaptcha-disabled g-recaptcha-invalid-key">
                 </div>
               </div>
-            </div><input type="submit"
+            </div>
+            <input type="submit"
                    value="Submit"
                    data-wait="Please wait..."
                    id="w-node-_9e0979ad-a750-88c0-0ac5-cc17f22e4994-01a3cb55"
+                   (click)="submit()"
                    class="button">
           </form>
           <div class="success-message w-form-done">
@@ -109,3 +111,9 @@
   </div>
 </div>
 <app-footer></app-footer>
+<!-- <form action="https://mailthis.to/you@mail.com" 
+    method="POST"> 
+    <input type="text" name="name" placeholder="Your name"> 
+    <input type="email" name="_replyto" placeholder="Your email"> 
+    <input type="submit" value="Send"> 
+</form>  -->
