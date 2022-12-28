@@ -8,6 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
   @Input()
   isEmailReady: boolean = false;
+  @Input()
+  isContactPage: boolean = false;
+  @Input()
+  isHomePage: boolean = false;
 
   constructor() { }
 

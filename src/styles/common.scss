@@ -374,6 +374,13 @@
   margin-left: auto;
 }
 
+.container-fit {
+  width: fit-content;
+  width: -moz-fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .margin-tiny {
   margin: 0.25rem;
 }

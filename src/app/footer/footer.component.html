@@ -3,7 +3,7 @@
     <div class="padding-vertical padding-xxlarge">
       <div class="padding-bottom padding-xxlarge">
         <div class="w-layout-grid footer_top-wrapper">
-          <div class="footer_left-wrapper">
+          <div *ngIf="!isContactPage" class="footer_left-wrapper">
             <div class="margin-bottom margin-medium">
               <a routerLink="/home"
                  aria-current="page"
@@ -81,12 +81,14 @@
           </div>
           <div class="w-layout-grid footer_menu-wrapper">
             <div class="footer_link-list">
+              <a *ngIf="!isHomePage" routerLink="/home"
+                 class="footer_link">Home</a>
               <a routerLink="/accommodation"
                  class="footer_link">Accommodation</a>
               <a *ngIf="isEmailReady"
                  routerLink="/booking"
                  class="footer_link">Booking</a>
-              <a routerLink="/contact"
+              <a *ngIf="!isContactPage" routerLink="/contact"
                  class="footer_link">Contact</a>
             </div>
           </div>
@@ -100,10 +102,10 @@
                class="footer_credit-design">Daniel Lun</a>
             and built by Kelby Tansley
           </div>
-          <div class="w-layout-grid footer_legal-list">
+          <!-- <div class="w-layout-grid footer_legal-list">
             <a href="privacy-policy.html"
                class="footer_legal-link">Privacy Policy</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
