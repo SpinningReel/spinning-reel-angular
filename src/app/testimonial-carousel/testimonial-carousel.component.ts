@@ -20,9 +20,10 @@ export class TestimonialCarouselComponent implements OnInit {
   @Input()
   autoSlide: boolean = true;
   @Input()
-  slideInterval: number = 6000;
+  slideInterval: number = 15000;
 
   selectedIndex: number = 0;
+  carouselInterval: any;
 
   ngOnInit() {
     if (this.autoSlide) {
@@ -32,12 +33,12 @@ export class TestimonialCarouselComponent implements OnInit {
     this.testimonials = [];
     this.testimonials.push({
       ratings: new Array(5),
-      comments: "\"I have stayed twice at Spinning Reel in the bed and breakfast apartments and both times have been amazing. The rooms are well equipped, clean and very comfortable and the view of the sea is beautiful. The highlights of staying at Spinning Reel are the peaceful environment and nearby beach which is lovely for walks. I recommend this accommodation to anyone coming to Port Alfred. Thank you!\"", 
+      comments: "\"I have stayed twice at Spinning Reel in the bed and breakfast apartments and both times have been amazing. The rooms are well equipped, clean and very comfortable and the view of the sea is beautiful. The highlights of staying at Spinning Reel are the peaceful environment and nearby beach which is lovely for walks. I recommend this accommodation to anyone coming to Port Alfred. Thank you!\"",
       person: "Caroline"
     });
     this.testimonials.push({
       ratings: new Array(5),
-      comments: "\"We have visited Spinning Reels twice and each time was magical – most definitely my most favourite getaway place – a piece of heaven on earth – loved loved loved it!\"", 
+      comments: "\"We have visited Spinning Reels twice and each time was magical – most definitely my most favourite getaway place – a piece of heaven on earth – loved loved loved it!\"",
       person: "Melissa Weldrick"
     });
     this.testimonials.push({
@@ -55,13 +56,10 @@ export class TestimonialCarouselComponent implements OnInit {
       comments: "\"We stayed in the B+B, it was absolutely the best. I would recommend Spinning Reel for anyone!\"",
       person: "Jaco & Marize"
     });
-
   }
 
   autoSlideImages(): void {
-    setInterval(() => {
-      this.onNextClick();
-    }, this.slideInterval)
+    this.setCarouselInterval();
   }
 
   selectImage(index: number): void {
@@ -69,6 +67,7 @@ export class TestimonialCarouselComponent implements OnInit {
   }
 
   onPrevClick(): void {
+    this.setCarouselInterval();
     if (this.selectedIndex === 0) {
       this.selectedIndex = this.testimonials.length - 1;
     } else {
@@ -77,11 +76,19 @@ export class TestimonialCarouselComponent implements OnInit {
   }
 
   onNextClick(): void {
+    this.setCarouselInterval();
     if (this.selectedIndex === this.testimonials.length - 1) {
       this.selectedIndex = 0;
     } else {
       this.selectedIndex++;
     }
+  }
+
+  private setCarouselInterval(): void {
+    clearTimeout(this.carouselInterval);
+    this.carouselInterval = setInterval(() => {
+      this.onNextClick();
+    }, this.slideInterval)
   }
 }
 

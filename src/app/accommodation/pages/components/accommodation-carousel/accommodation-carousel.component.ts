@@ -23,7 +23,8 @@ export class AccommodationCarouselComponent implements OnInit {
   slideInterval: number = 6000;
 
   selectedIndex: number = 0;
-  
+  private carouselInterval: any;
+
   ngOnInit() {
     if (this.autoSlide) {
       this.autoSlideImages();
@@ -31,7 +32,12 @@ export class AccommodationCarouselComponent implements OnInit {
   }
 
   autoSlideImages(): void {
-    setInterval(() => {
+    this.setCarouselInterval();
+  }
+
+  private setCarouselInterval(): void {
+    clearTimeout(this.carouselInterval);
+    this.carouselInterval = setInterval(() => {
       this.onNextClick();
     }, this.slideInterval)
   }
@@ -41,6 +47,7 @@ export class AccommodationCarouselComponent implements OnInit {
   }
 
   onPrevClick(): void {
+    this.setCarouselInterval();
     if (this.selectedIndex === 0) {
       this.selectedIndex = this.images.length - 1;
     } else {
@@ -49,6 +56,7 @@ export class AccommodationCarouselComponent implements OnInit {
   }
 
   onNextClick(): void {
+    this.setCarouselInterval();
     if (this.selectedIndex === this.images.length - 1) {
       this.selectedIndex = 0;
     } else {
