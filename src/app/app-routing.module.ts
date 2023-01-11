@@ -9,16 +9,15 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'accommodation', component: AccommodationComponent },
-  { path: 'accommodation/beach-cottages', component: BeachCottagesComponent },
-  { path: 'accommodation/log-chalets', component: ChaletsComponent },
-  { path: 'accommodation/vermont-chalet', component: VermontComponent },
-  { path: 'accommodation/bed-and-breakfast', component: BedAndBreakfastComponent },
-  { path: 'booking', component: ContactComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', component: HomeComponent },
+  { path: 'home', title: 'Home', component: HomeComponent },
+  { path: 'accommodation', title: 'Accommodation', component: AccommodationComponent },
+  { path: 'accommodation/beach-cottages', title: 'Beach Cottage Accommodation', component: BeachCottagesComponent },
+  { path: 'accommodation/log-chalets', title: 'Log Chalet Accommodation', component: ChaletsComponent },
+  { path: 'accommodation/vermont-chalet', title: 'Vermont Chalet Accommodation', component: VermontComponent },
+  { path: 'accommodation/bed-and-breakfast', title: 'Bed and Breakfast Accommodation', component: BedAndBreakfastComponent },
+  { path: 'contact', title: 'Contact', component: ContactComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', title: 'Home', component: HomeComponent },
 ];
 
 @NgModule({
