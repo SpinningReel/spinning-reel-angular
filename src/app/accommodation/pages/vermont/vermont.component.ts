@@ -3,9 +3,10 @@ import { Amenity } from 'src/app/model/amenity.model';
 import { imageSrcAlt } from 'src/app/model/image-src-alt.model';
 
 @Component({
-  selector: 'app-vermont',
-  templateUrl: './vermont.component.html',
-  styleUrls: ['./vermont.component.scss']
+    selector: 'app-vermont',
+    templateUrl: './vermont.component.html',
+    styleUrls: ['./vermont.component.scss'],
+    standalone: false
 })
 export class VermontComponent implements OnInit {
   public features: Amenity[] = [

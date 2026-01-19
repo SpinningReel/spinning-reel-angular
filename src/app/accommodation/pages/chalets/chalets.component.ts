@@ -3,9 +3,10 @@ import { Amenity } from 'src/app/model/amenity.model';
 import { imageSrcAlt } from 'src/app/model/image-src-alt.model';
 
 @Component({
-  selector: 'app-chalets',
-  templateUrl: './chalets.component.html',
-  styleUrls: ['./chalets.component.scss']
+    selector: 'app-chalets',
+    templateUrl: './chalets.component.html',
+    styleUrls: ['./chalets.component.scss'],
+    standalone: false
 })
 export class ChaletsComponent implements OnInit {
   public features: Amenity[] = [

@@ -3,9 +3,10 @@ import { Amenity } from 'src/app/model/amenity.model';
 import { imageSrcAlt } from 'src/app/model/image-src-alt.model';
 
 @Component({
-  selector: 'app-beach-cottages',
-  templateUrl: './beach-cottages.component.html',
-  styleUrls: ['./beach-cottages.component.scss']
+    selector: 'app-beach-cottages',
+    templateUrl: './beach-cottages.component.html',
+    styleUrls: ['./beach-cottages.component.scss'],
+    standalone: false
 })
 export class BeachCottagesComponent implements OnInit {
   public features: Amenity[] = [

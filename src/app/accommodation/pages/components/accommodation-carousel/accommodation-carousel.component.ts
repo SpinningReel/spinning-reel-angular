@@ -6,9 +6,10 @@ import {
 import { imageSrcAlt } from "src/app/model/image-src-alt.model";
 
 @Component({
-  selector: 'app-accommodation-carousel',
-  templateUrl: './accommodation-carousel.component.html',
-  styleUrls: ['./accommodation-carousel.component.scss'],
+    selector: 'app-accommodation-carousel',
+    templateUrl: './accommodation-carousel.component.html',
+    styleUrls: ['./accommodation-carousel.component.scss'],
+    standalone: false
 })
 export class AccommodationCarouselComponent implements OnInit {
   @Input()

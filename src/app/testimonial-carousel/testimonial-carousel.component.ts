@@ -6,9 +6,10 @@ import {
 import { imageSrcAlt } from "src/app/model/image-src-alt.model";
 
 @Component({
-  selector: 'app-testimonial-carousel',
-  templateUrl: './testimonial-carousel.component.html',
-  styleUrls: ['./testimonial-carousel.component.scss'],
+    selector: 'app-testimonial-carousel',
+    templateUrl: './testimonial-carousel.component.html',
+    styleUrls: ['./testimonial-carousel.component.scss'],
+    standalone: false
 })
 export class TestimonialCarouselComponent implements OnInit {
   @Input()

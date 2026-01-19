@@ -3,9 +3,10 @@ import { Amenity } from 'src/app/model/amenity.model';
 import { imageSrcAlt } from 'src/app/model/image-src-alt.model';
 
 @Component({
-  selector: 'app-bed-and-breakfast',
-  templateUrl: './bed-and-breakfast.component.html',
-  styleUrls: ['./bed-and-breakfast.component.scss']
+    selector: 'app-bed-and-breakfast',
+    templateUrl: './bed-and-breakfast.component.html',
+    styleUrls: ['./bed-and-breakfast.component.scss'],
+    standalone: false
 })
 export class BedAndBreakfastComponent implements OnInit {
   public features: Amenity[] = [

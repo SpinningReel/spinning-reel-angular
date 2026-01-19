@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-accommodation-option-medium',
-  templateUrl: './accommodation-option-medium.component.html',
-  styleUrls: ['./accommodation-option-medium.component.scss']
+    selector: 'app-accommodation-option-medium',
+    templateUrl: './accommodation-option-medium.component.html',
+    styleUrls: ['./accommodation-option-medium.component.scss'],
+    standalone: false
 })
 export class AccommodationOptionMediumComponent implements OnInit {
 

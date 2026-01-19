@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-accommodation-option-large-grid',
-  templateUrl: './accommodation-option-large-grid.component.html',
-  styleUrls: ['./accommodation-option-large-grid.component.scss']
+    selector: 'app-accommodation-option-large-grid',
+    templateUrl: './accommodation-option-large-grid.component.html',
+    styleUrls: ['./accommodation-option-large-grid.component.scss'],
+    standalone: false
 })
 export class AccommodationOptionLargeGridComponent implements OnInit {
   @Input()

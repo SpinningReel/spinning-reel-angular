@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-attractions',
-  templateUrl: './attractions.component.html',
-  styleUrls: ['./attractions.component.scss']
+    selector: 'app-attractions',
+    templateUrl: './attractions.component.html',
+    styleUrls: ['./attractions.component.scss'],
+    standalone: false
 })
 export class AttractionsComponent implements OnInit {
 
