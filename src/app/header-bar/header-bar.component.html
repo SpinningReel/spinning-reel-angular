@@ -9,7 +9,7 @@
              class="icon-x-small">
         <div>info&#64;spinningreel.co.za</div>
       </a>
-      <a href="tel:+270466244281"
+      <a href="tel:+27466244281"
          class="contact-link w-inline-block">
         <img src="../../assets/img/svg/phone.svg"
              loading="lazy"
@@ -34,18 +34,19 @@
                  (click)="navToggle()"
                  class="navbar-link w-nav-link">Accommodation</a>
             </li>
-            <li>
-              <a [ngClass]="isSummary ? 'text-color-black' : ''"
-                 routerLink="/contact"
-                 (click)="navToggle()"
-                 class="navbar-link w-nav-link">Contact</a>
-            </li>
-            <li>
+            <li *ngIf="isEmailReady">
               <!-- Burger menu only booking button -->
               <a [ngClass]="isSummary ? 'text-color-black' : ''"
                  routerLink="/booking"
                  (click)="navToggle()"
                  class="navbar-link w-nav-link invisible-after-tablet">Book Now</a>
+            </li>
+            <li *ngIf="!isEmailReady">
+              <!-- Burger menu only booking button -->
+              <a [ngClass]="isSummary ? 'text-color-black' : ''"
+                 routerLink="/contact"
+                 (click)="navToggle()"
+                 class="navbar-link w-nav-link invisible-after-tablet">Contact Us</a>
             </li>
           </ul>
         </nav>
@@ -57,7 +58,7 @@
         </label>
 
         <!-- Tablet booking button -->
-        <div *ngIf="!isSummary"
+        <div *ngIf="!isSummary && isEmailReady"
              class="booking-button invisible-before-tablet ease-in-out-smooth">
           <a routerLink="/booking"
              class="button is-alternate">Book Now</a>
@@ -88,11 +89,18 @@
     <div class="margin-bottom margin-small">
       <h1 class="text-color-white">{{headerSummary}}</h1>
     </div>
-    <div *ngIf="isMainHeader"
+    <div *ngIf="isMainHeader && isEmailReady"
          class="margin-top margin-medium">
       <div class="button-row">
         <a routerLink="/booking"
            class="button is-alternate">Book now</a>
+      </div>
+    </div>
+    <div *ngIf="isMainHeader && !isEmailReady"
+         class="margin-top margin-medium">
+      <div class="button-row">
+        <a routerLink="/contact"
+           class="button is-alternate">Contact Us</a>
       </div>
     </div>
   </div>

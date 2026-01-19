@@ -9,20 +9,26 @@
           <div class="margin-bottom margin-small">
             <p class="text-size-medium">{{overview}}</p>
           </div>
-          <div class="text-size-medium w-richtext">
+          <div class="text-size-medium">
             <p>All units have:</p>
             <ul role="list">
               <li>Fantastic sea views</li>
               <li>Access to tennis court on the premises</li>
-              <li>Kiddies tidal pool, ideal for little ones</li>
               <li>Private access to the beach</li>
+              <li>Kiddies tidal pool, ideal for little ones</li>
               <li>Close to golf course</li>
             </ul>
           </div>
-          <div class="margin-top margin-medium">
+          <div *ngIf="isEmailReady" class="margin-top margin-medium">
             <div class="button-row">
               <a routerLink="/booking"
                  class="button-tertiary is-alternate">Book now</a>
+            </div>
+          </div>
+          <div *ngIf="!isEmailReady" class="margin-top margin-medium">
+            <div class="button-row">
+              <a routerLink="/contact"
+                 class="button-tertiary is-alternate">Contact Us</a>
             </div>
           </div>
         </div>
