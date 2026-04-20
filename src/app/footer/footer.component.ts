@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'app-footer',
@@ -7,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
     standalone: false
 })
 export class FooterComponent implements OnInit {
+  bookingUrl: string = environment.bookingUrl;
+
   @Input()
   isEmailReady: boolean = false;
   @Input()

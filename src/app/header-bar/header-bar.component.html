@@ -37,16 +37,20 @@
             <li *ngIf="isEmailReady">
               <!-- Burger menu only booking button -->
               <a [ngClass]="isSummary ? 'text-color-black' : ''"
-                 routerLink="/booking"
+                  [href]="bookingUrl"
+                target="_blank"
+                rel="noopener noreferrer"
                  (click)="navToggle()"
                  class="navbar-link w-nav-link invisible-after-tablet">Book Now</a>
             </li>
             <li *ngIf="!isEmailReady">
               <!-- Burger menu only booking button -->
               <a [ngClass]="isSummary ? 'text-color-black' : ''"
-                 routerLink="/contact"
+                  [href]="bookingUrl"
+                target="_blank"
+                rel="noopener noreferrer"
                  (click)="navToggle()"
-                 class="navbar-link w-nav-link invisible-after-tablet">Contact Us</a>
+                class="navbar-link w-nav-link invisible-after-tablet">Book Now</a>
             </li>
           </ul>
         </nav>
@@ -60,7 +64,9 @@
         <!-- Tablet booking button -->
         <div *ngIf="!isSummary && isEmailReady"
              class="booking-button invisible-before-tablet ease-in-out-smooth">
-          <a routerLink="/booking"
+           <a [href]="bookingUrl"
+             target="_blank"
+             rel="noopener noreferrer"
              class="button is-alternate">Book Now</a>
         </div>
       </div>
@@ -92,15 +98,19 @@
     <div *ngIf="isMainHeader && isEmailReady"
          class="margin-top margin-medium">
       <div class="button-row">
-        <a routerLink="/booking"
+        <a [href]="bookingUrl"
+          target="_blank"
+          rel="noopener noreferrer"
            class="button is-alternate">Book now</a>
       </div>
     </div>
     <div *ngIf="isMainHeader && !isEmailReady"
          class="margin-top margin-medium">
       <div class="button-row">
-        <a routerLink="/contact"
-           class="button is-alternate">Contact Us</a>
+        <a [href]="bookingUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button is-alternate">Book Now</a>
       </div>
     </div>
   </div>

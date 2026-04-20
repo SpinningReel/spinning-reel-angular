@@ -10,7 +10,6 @@ import { AttractionsComponent } from './attractions/attractions.component';
 import { FeatureComponent } from './feature/feature.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
-import { BookingComponent } from './booking/booking.component';
 import { AccommodationGridComponent } from './accommodation/accommodation-grid/accommodation-grid.component';
 import { BedAndBreakfastComponent } from './accommodation/pages/bed-and-breakfast/bed-and-breakfast.component';
 import { ChaletsComponent } from './accommodation/pages/chalets/chalets.component';
@@ -36,7 +35,6 @@ import { TestimonialCarouselComponent } from "./testimonial-carousel/testimonial
         FeatureComponent,
         FooterComponent,
         ContactComponent,
-        BookingComponent,
         AccommodationGridComponent,
         BedAndBreakfastComponent,
         ChaletsComponent,

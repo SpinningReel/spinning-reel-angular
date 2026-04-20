@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'app-header-bar',
@@ -7,6 +8,8 @@ import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@
     standalone: false
 })
 export class HeaderBarComponent implements OnInit {
+  bookingUrl: string = environment.bookingUrl;
+
   @Input()
   isEmailReady: boolean = false;
 
@@ -26,17 +29,17 @@ export class HeaderBarComponent implements OnInit {
   headerSummary: string = "Secluded beach cottages";
 
   @HostListener('click', ['$event'])
-  click() {
+  click(_event: Event) {
     this.isChecked = false;
   }
 
   @HostListener('click', ['$event.target'])
-  clickTarget() {
+  clickTarget(_target: EventTarget | null) {
     this.isChecked = false;
   }
 
   @HostListener('document:scroll', ['$event'])
-  scroll() {
+  scroll(_event: Event) {
     this.isChecked = false;
   }
 

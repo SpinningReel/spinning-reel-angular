@@ -81,13 +81,14 @@
           </div>
           <div class="w-layout-grid footer_menu-wrapper">
             <div class="footer_link-list">
+              <a [href]="bookingUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer_link">Book Now</a>
               <a *ngIf="!isHomePage" routerLink="/home"
                  class="footer_link">Home</a>
               <a routerLink="/accommodation"
                  class="footer_link">Accommodation</a>
-              <a *ngIf="isEmailReady"
-                 routerLink="/booking"
-                 class="footer_link">Booking</a>
               <a *ngIf="!isContactPage" routerLink="/contact"
                  class="footer_link">Contact</a>
             </div>

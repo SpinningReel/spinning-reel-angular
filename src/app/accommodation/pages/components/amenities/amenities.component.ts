@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Amenity } from 'src/app/model/amenity.model';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'app-amenities',
@@ -8,6 +9,7 @@ import { Amenity } from 'src/app/model/amenity.model';
     standalone: false
 })
 export class AmenitiesComponent implements OnInit {
+  bookingUrl: string = environment.bookingUrl;
 
   @Input()
   isEmailReady: boolean = false;
@@ -17,9 +19,6 @@ export class AmenitiesComponent implements OnInit {
 
   @Input()
   public overview!: string;
-
-  @Input()
-  public bookingLink!: string;
 
   constructor() { }
 

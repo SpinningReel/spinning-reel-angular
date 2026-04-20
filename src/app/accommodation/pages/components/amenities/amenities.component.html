@@ -21,14 +21,18 @@
           </div>
           <div *ngIf="isEmailReady" class="margin-top margin-medium">
             <div class="button-row">
-              <a routerLink="/booking"
+              <a [href]="bookingUrl"
+                 target="_blank"
+                 rel="noopener noreferrer"
                  class="button-tertiary is-alternate">Book now</a>
             </div>
           </div>
           <div *ngIf="!isEmailReady" class="margin-top margin-medium">
             <div class="button-row">
-              <a routerLink="/contact"
-                 class="button-tertiary is-alternate">Contact Us</a>
+              <a [href]="bookingUrl"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="button-tertiary is-alternate">Book Now</a>
             </div>
           </div>
         </div>
