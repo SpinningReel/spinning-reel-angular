@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AmenitiesComponent implements OnInit {
   bookingUrl: string = environment.bookingUrl;
+  showBookingConfirmation = false;
 
   @Input()
   isEmailReady: boolean = false;
@@ -23,6 +24,20 @@ export class AmenitiesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onBookNowClick(event: Event): void {
+    event.preventDefault();
+    this.showBookingConfirmation = true;
+  }
+
+  closeBookingConfirmation(): void {
+    this.showBookingConfirmation = false;
+  }
+
+  confirmBookingRedirect(): void {
+    this.showBookingConfirmation = false;
+    window.open(this.bookingUrl, '_blank', 'noopener,noreferrer');
   }
 
 }

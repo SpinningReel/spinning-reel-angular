@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { AnalyticsService } from './services/analytics.service';
 
 @Component({
     selector: 'app-root',
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
     standalone: false
 })
 export class AppComponent {
+    private readonly analyticsService = inject(AnalyticsService);
+
+    constructor() {
+        this.analyticsService.initialize();
+    }
 }

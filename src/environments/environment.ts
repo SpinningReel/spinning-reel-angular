@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
-  bookingUrl: 'https://book.nightsbridge.com/xxxxx'
+  bookingUrl: 'https://book.nightsbridge.com/34572',
+  analytics: {
+    gaMeasurementId: '',
+    clarityProjectId: ''
+  }
 };
 
 /*

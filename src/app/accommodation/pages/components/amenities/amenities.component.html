@@ -24,6 +24,7 @@
               <a [href]="bookingUrl"
                  target="_blank"
                  rel="noopener noreferrer"
+                 (click)="onBookNowClick($event)"
                  class="button-tertiary is-alternate">Book now</a>
             </div>
           </div>
@@ -32,6 +33,7 @@
               <a [href]="bookingUrl"
                  target="_blank"
                  rel="noopener noreferrer"
+                 (click)="onBookNowClick($event)"
                  class="button-tertiary is-alternate">Book Now</a>
             </div>
           </div>
@@ -61,6 +63,30 @@
             number of people. We offer great value for money. Please contact us for a firm price.</p>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showBookingConfirmation"
+     class="booking-confirmation"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="booking-confirmation-title"
+     aria-describedby="booking-confirmation-description">
+  <div class="booking-confirmation__backdrop" (click)="closeBookingConfirmation()"></div>
+  <div class="booking-confirmation__panel">
+    <h3 id="booking-confirmation-title">Before you continue</h3>
+    <p id="booking-confirmation-description">
+      We will direct you to the Spinning Reel booking page, where all accommodation types are managed.
+      <br><br>
+      It is your responsibility to select the correct accomodation type before confirming your booking.
+      Spinning Reel accepts no responsibility for incorrect bookings. 
+      <br><br>
+      If you are uncertain about the accommodation types, please contact us.
+    </p>
+    <div class="booking-confirmation__actions">
+      <button type="button" class="button-tertiary is-alternate" (click)="confirmBookingRedirect()">Accept</button>
+      <button type="button" class="button is-secondary" (click)="closeBookingConfirmation()">Cancel</button>
     </div>
   </div>
 </div>
